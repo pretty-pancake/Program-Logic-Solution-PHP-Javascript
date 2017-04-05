@@ -1,0 +1,21 @@
+----- PHP -----
+
+function checkPalindrome($inputString) {
+    $pali = false;
+    $length = strlen($inputString);
+    
+    if($length == 0){
+        $pali = false;
+    } else {
+        for($i = 0; $i <= $length/2; $i++){
+            if($inputString[$i] === $inputString[$length-1]){
+                $pali = true;
+            } else {
+                $pali = false;
+                break;
+            }
+            $length--;
+        }
+    }
+    return $pali;
+}
