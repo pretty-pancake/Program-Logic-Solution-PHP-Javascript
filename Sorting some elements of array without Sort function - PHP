@@ -1,0 +1,20 @@
+----- PHP -----
+
+function sortByHeight($a) { 
+    for($j = 0; $j < count($a); $j++){
+        if($a[$j] == -1){
+            next;
+        } else {
+            for($i = 0; $i < count($a)-1; $i++){
+                if($a[$j] != -1){
+                    if($a[$i] > $a[$j]){
+                        $temp = $a[$i];
+                        $a[$i] = $a[$j];
+                        $a[$j] = $temp;
+                    } else next; 
+                }
+            }
+        }
+    }
+    return $a;
+}
